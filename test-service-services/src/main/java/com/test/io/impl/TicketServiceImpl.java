@@ -41,6 +41,9 @@ public class TicketServiceImpl implements TicketService {
 		Optional<TicketEntity> ticketEntity = ticketRepository.findById(ticketId);
 		ticketRepository.saveAndFlush(TicketMapper.assignTicket(ticketEntity.get(), emloyeeID));
 	}
+	public void getTicket(Long ticketId, Long emloyeeID) {
+		//do nothing
+	}
 
 	@Override
 	public void closeTicket(Long ticketId) throws TicketNotFoundException {
